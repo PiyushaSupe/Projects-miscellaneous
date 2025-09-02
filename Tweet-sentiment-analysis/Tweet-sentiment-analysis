@@ -1,0 +1,25 @@
+This project focuses on performing sentiment analysis on tweets related to data science, 
+with the goal of classifying them into positive and negative sentiments. Sentiment analysis is 
+a key application of Natural Language Processing (NLP) that allows for the extraction of 
+meaningful insights from large volumes of text data. By analysing the sentiments expressed in 
+social media platforms like Twitter, organizations and researchers can gain valuable feedback 
+on public opinion, emerging trends, and overall sentiment toward specific topics. 
+The project begins with data pre-processing, where the raw tweet data is cleaned by removing 
+irrelevant elements such as URLs, special characters, hashtags, and mentions, followed by the 
+conversion of the text to lowercase and tokenization. To convert the text into a numerical 
+representation, TF-IDF (Term Frequency-Inverse Document Frequency) vectorization is 
+applied, which helps in identifying the most important words in the dataset that contribute to 
+the sentiment classification. 
+For the sentiment classification task, the project employs the Multinomial Naïve Bayes 
+algorithm, a probabilistic model that is well-suited for text classification tasks. This model 
+works by calculating the likelihood of a given word being associated with a specific sentiment, 
+based on the training data. The sentiment classification pipeline is built using Scikit-learn, a 
+widely used machine learning library, which facilitates the integration of pre-processing, 
+feature extraction, and model training. 
+The performance of the model is evaluated using key metrics such as accuracy, 
+precision, recall, and F1-score, which provide a comprehensive understanding of how well 
+the model is classifying tweets. Additionally, several visualizations are created to interpret the 
+results and offer insights into the data, including sentiment distribution plots, word clouds, and 
+confusion matrices. These visual tools help to highlight the frequency of positive and negative 
+tweets, the most common words associated with each sentiment, and the classification errors 
+made by the model.
