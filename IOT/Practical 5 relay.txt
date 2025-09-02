@@ -1,0 +1,48 @@
+ // C++ code
+int sensorValue;
+void setup()
+{
+  
+  pinMode(A0, INPUT);
+  Serial.begin(9600);
+  pinMode(2, OUTPUT);
+}
+
+void loop()
+{
+  sensorValue = analogRead(A0);
+  int celsius = sensorValue/2;
+  Serial.println(celsius);
+  if(celsius > 100)
+  {
+  	digitalWrite(2, HIGH);
+  }else{
+  	digitalWrite(2, LOW);
+  }
+  delay(500);
+}
+
+/*
+const int relayPin = 2;
+const int tempPin = A0;
+const float threshold = 25.0;
+int tempValue;
+void setup() {
+  pinMode(relayPin, OUTPUT);
+  Serial.begin(9600);
+}
+void loop() {
+  tempValue = analogRead(tempPin);
+  float temperature = (5.0 * tempValue * 100.0) / 1024.0;
+  Serial.print("Temperature: ");
+  Serial.print(temperature);
+  Serial.println("C");
+  if (temperature > threshold) {
+    digitalWrite(relayPin, LOW);
+  } else {
+    digitalWrite(relayPin, HIGH);
+  }
+  delay(1000);
+}
+
+*/
