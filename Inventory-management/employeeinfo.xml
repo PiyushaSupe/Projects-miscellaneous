@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="workers.xsl"?>
+<workers>
+    <worker>
+        <name>Piyusha Rajendra Supe</name>
+        <email>piyusha@example.com</email>
+    </worker>
+    <worker>
+        <name>Chinmay</name>
+        <email>chinmay@example.com</email>
+    </worker>
+    <worker>
+        <name>Ashley</name>
+        <email>ashley@example.com</email>
+    </worker>
+    <worker>
+        <name>Diya Mehta</name>
+        <email>diya.mehta@example.com</email>
+    </worker>
+    <worker>
+        <name>Rahul Sharma</name>
+        <email>rahul.sharma@example.com</email>
+    </worker>
+    <worker>
+        <name>Ishaan Verma</name>
+        <email>ishaan.verma@example.com</email>
+    </worker>
+    <worker>
+        <name>Priya Reddy</name>
+        <email>priya.reddy@example.com</email>
+    </worker>
+    <worker>
+        <name>Simran Kaur</name>
+        <email>simran.kaur@example.com</email>
+    </worker>
+    <worker>
+        <name>Neha Nair</name>
+        <email>neha.nair@example.com</email>
+    </worker>
+    <worker>
+        <name>Aditya Singh</name>
+        <email>aditya.singh@example.com</email>
+    </worker>
+    <worker>
+        <name>Rohit Das</name>
+        <email>rohit.das@example.com</email>
+    </worker>
+    <worker>
+        <name>Tanvi Joshi</name>
+        <email>tanvi.joshi@example.com</email>
+    </worker>
+    <worker>
+        <name>Sachin Roy</name>
+        <email>sachin.roy@example.com</email>
+    </worker>
+    <worker>
+        <name>Kavya Gupta</name>
+        <email>kavya.gupta@example.com</email>
+    </worker>
+    <worker>
+        <name>Vikram Rao</name>
+        <email>vikram.rao@example.com</email>
+    </worker>
+    <worker>
+        <name>Nisha Shah</name>
+        <email>nisha.shah@example.com</email>
+    </worker>
+    <worker>
+        <name>Krishna Bhat</name>
+        <email>krishna.bhat@example.com</email>
+    </worker>
+    <worker>
+        <name>Anjali Mishra</name>
+        <email>anjali.mishra@example.com</email>
+    </worker>
+    <worker>
+        <name>Deepak Sinha</name>
+        <email>deepak.sinha@example.com</email>
+    </worker>
+    <worker>
+        <name>Riya Kapoor</name>
+        <email>riya.kapoor@example.com</email>
+    </worker>
+    <worker>
+        <name>Karan Iyer</name>
+        <email>karan.iyer@example.com</email>
+    </worker>
+    <worker>
+        <name>Sneha Dasgupta</name>
+        <email>sneha.dasgupta@example.com</email>
+    </worker>
+</workers>
