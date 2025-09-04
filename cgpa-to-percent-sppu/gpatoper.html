@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CGPA → Percentage Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #8e0e00, #1f1c18);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #fff;
+    }
+    .card {
+      background: #2c0b0e;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+      width: 460px;
+      text-align: center;
+      border: 2px solid #ff4b2b;
+    }
+    .logo {
+      width: 450px;
+      height: 100px;
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #ff4b2b;
+    }
+    input {
+      width: 90%;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      outline: none;
+      text-align: center;
+    }
+    button {
+      padding: 12px;
+      width: 100%;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background: #ff4b2b;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #ff1e00;
+    }
+    .results {
+      margin-top: 20px;
+      text-align: left;
+      background: #400000;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 15px;
+      border: 1px solid #ff4b2b;
+    }
+    .results p {
+      margin: 6px 0;
+    }
+    .highlight {
+      font-weight: bold;
+      color: #ffcc70;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="logo.jpg" alt="College Logo" class="logo"
+    width="500px"
+    height="100px" 
+    >
+    <h2>CGPA → Percentage Calculator</h2>
+    <input type="number" id="gpa" placeholder="Enter CGPA (0 - 10)" step="0.01" min="0" max="10">
+    <button onclick="calculate()">Calculate</button>
+    <div id="output" class="results" style="display:none;"></div>
+<p>@2025 AISSMS COE - Based on SPPU Circular 332/2020</p>
+
+  </div>
+	
+
+  <script>
+    function calculate() {
+      const gpa = parseFloat(document.getElementById('gpa').value);
+      const output = document.getElementById('output');
+
+      if (isNaN(gpa) || gpa < 0 || gpa > 10) {
+        output.style.display = 'block';
+        output.innerHTML = "<p class='highlight'>⚠️ Please enter a valid GPA between 0 and 10.</p>";
+        return;
+      }
+
+      let percentage = null;
+      let grade = "";
+
+      if (gpa >= 9.50) {
+        percentage = 20 * gpa - 100;
+        grade = "O (Outstanding)";
+      } else if (gpa >= 8.25) {
+        percentage = 12 * gpa - 25;
+        grade = "A+";
+      } else if (gpa >= 6.75) {
+        percentage = 10 * gpa - 7.5;
+        grade = "A";
+      } else if (gpa >= 5.75) {
+        percentage = 5 * gpa + 26.25;
+        grade = "B+";
+      } else if (gpa >= 5.25) {
+        percentage = 10 * gpa - 2.5;
+        grade = "B";
+      } else if (gpa >= 4.75) {
+        percentage = 10 * gpa - 2.5;
+        grade = "C";
+      } else if (gpa >= 4.00) {
+        percentage = 6.6 * gpa + 13.6;
+        grade = "D";
+      } else {
+        percentage = 0;
+        grade = "F (Fail)";
+      }
+
+      percentage = percentage.toFixed(2);
+
+      // Passing Class Logic (optional)
+      let passingClass = "";
+      if (percentage >= 75) passingClass = "Distinction";
+      else if (percentage >= 60) passingClass = "First Class";
+      else if (percentage >= 50) passingClass = "Second Class";
+      else if (percentage >= 40) passingClass = "Pass Class";
+      else passingClass = "Fail";
+
+      output.style.display = 'block';
+      output.innerHTML = `
+        <p><span class="highlight">Entered CGPA:</span> ${gpa}</p>
+        <p><span class="highlight">Calculated %:</span> ${percentage}%</p>
+        <p><span class="highlight">Grade:</span> ${grade}</p>
+        <p><span class="highlight">Class of Passing:</span> ${passingClass}</p>
+      `;
+    }
+  </script>
+</body>
+<footer>
+</footer>
+</html>
